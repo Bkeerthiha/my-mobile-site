@@ -1,0 +1,98 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-family: 'Poppins', 'Segoe UI', serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Animated colorful background */
+    background: linear-gradient(-45deg, #ff9a9e, #fad0c4, #fad0c4, #ffdde1);
+    background-size: 400% 400%;
+    animation: gradientShift 10s ease infinite;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+#heartCanvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.glass-card {
+    position: relative;
+    z-index: 10;
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 30px;
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    color: #4a4a4a;
+    max-width: 500px;
+    animation: slideIn 1.5s ease;
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateY(50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.lock-icon { font-size: 50px; margin-bottom: 10px; }
+
+input {
+    width: 80%;
+    padding: 12px;
+    margin: 20px 0;
+    border-radius: 25px;
+    border: none;
+    outline: none;
+    text-align: center;
+    font-size: 1rem;
+}
+
+button {
+    background: #ff4d6d;
+    color: white;
+    border: none;
+    padding: 12px 40px;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(255, 77, 109, 0.4);
+}
+
+.heart-divider {
+    color: #ff4d6d;
+    font-size: 1.5rem;
+    margin: 15px 0;
+}
+
+.meaningful-para {
+    line-height: 1.6;
+    font-style: italic;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.main-question {
+    color: #c9184a;
+    margin-top: 30px;
+}
